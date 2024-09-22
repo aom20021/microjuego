@@ -267,6 +267,8 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -360,10 +362,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508da559f36680343aa51981f7075cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: {fileID: 5018152194341922664, guid: 876f19c57afdb774ca9d7d9ae1b8b236, type: 3}
   spawnRatePerMinute: 30
   spawnRateIncrement: 1
-  maxLife: 3
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a23905b496da2448d22edea0eddded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MeteorPrefabToPool: {fileID: 5018152194341922664, guid: 876f19c57afdb774ca9d7d9ae1b8b236, type: 3}
+  amountOfMeteorToPool: 3
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe61422274d86648bb8ff67c4e60741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefabToPool: {fileID: 8343494576664790077, guid: d22411891e1e23645859f0436ac8ac01, type: 3}
+  amountOfBulletToPool: 3
 --- !u!1 &597951382
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,7 +685,6 @@ MonoBehaviour:
   thrustForce: 100
   rotationSpeed: 120
   gun: {fileID: 409485646}
-  bulletPrefab: {fileID: 8343494576664790077, guid: d22411891e1e23645859f0436ac8ac01, type: 3}
 --- !u!70 &1850570035
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
